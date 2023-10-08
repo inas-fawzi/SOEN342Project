@@ -11,5 +11,5 @@ Lecture Section H
   * student id ~ 40208580
   * email ~ denisoh430@gmail.com
 ####  - Karin Sarkis
-  * student id ~
+  * student id ~ 40189273
   * email ~ karinsarkis125@gmail.com
