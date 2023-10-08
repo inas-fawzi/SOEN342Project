@@ -8,8 +8,8 @@ Lecture Section H
   * student id ~ 40208675
   * email ~ inasfawzi24@gmail.com
 #### - Denis Oh
+  * student id ~ 40208580
+  * email ~ denisoh430@gmail.com
+####  - Karin Sarkis
   * student id ~
-  * email ~ 
-####  - Karin 
-  * student id ~
-  * emmail ~
+  * email ~ karinsarkis125@gmail.com
