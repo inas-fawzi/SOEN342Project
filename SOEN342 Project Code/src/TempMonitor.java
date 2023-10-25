@@ -64,6 +64,32 @@ public class TempMonitor {
     private String Success(){
         return "ok (the sensor was deployed successfully)";
     }
+    //checks if  the sensor you wish to deploy has been deployed yet or not
+    private String SensorAlreadyDeployed(Sensor sensor){
+        //the id of the sensor you wwish to deploy
+        String sensorID = sensor.toString();
+        //initializing a string which will contain the id of already deployed sensors, it is used within the for loop
+        String deployedSensorID = "";
+        //this boolean will track if the sensor id you wish to deploy matches any deployed sensor ids
+        Boolean sensorAlreadyDeployed = false;
+
+        //goes through all the deployed sensor ids and compares them to the one you wish to deploy to check for a match
+        for (int i = 0; i < deployed.size(); i++){
+            deployedSensorID = deployed.get(i).toString();
+            if (sensorID.equals(deployedSensorID)){
+                sensorAlreadyDeployed = true;
+                break;
+            }
+        }
+        
+        //if a match was found that means the sensor you wish to deploy is already deployed
+        if (sensorAlreadyDeployed == true){
+            return "Sensor Deployed";
+        }
+        else{
+            return "";
+        }
+    }
 
     //checks if the location you wish to depploy a sensor to has already been covered
     private String LocationAlreadyCovered(Location location){
@@ -113,5 +139,15 @@ public class TempMonitor {
         }
         return null;
     }
+    //Will check if a location is not covered by a sensor and display a warning message
+    private String locationUnknown (Location location){
+        if(!map.containsValue(location)){
+            return "Location not covered";
+        }
+        else {
+            return "";
+        }
+    }
+}
 
 }

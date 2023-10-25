@@ -8,4 +8,9 @@ public class Location {
     public String toString(){
         return this.address;
     }
+
+    public Boolean equals(Location location){
+        return this.address.equals(location.toString());
+    }
+
 }

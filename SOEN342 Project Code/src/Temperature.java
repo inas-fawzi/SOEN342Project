@@ -10,7 +10,12 @@ public class Temperature {
         this.unit = "degrees celsius";
     }
 
+    public Temperature(int temerature){
+        this.temperature = temerature;
+        this.unit = "degrees celsius";
+    }
+
     public String toString(){
-        return temperature + unit;
+        return temperature + " " + unit;
     }
 }
