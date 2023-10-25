@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class TempMonitor {
     private ArrayList<Sensor> sensorList = new ArrayList<Sensor>();
@@ -87,6 +88,30 @@ public class TempMonitor {
         else{
             return "";
         }
+    }
+
+
+    // If given Location has been covered, print the temperature
+    public void readTemperature(Location location) { // Done: input(Location) output(prints string)
+        if (LocationAlreadyCovered(location) == "Location already covered") {
+            String temperature = readTemperatureOK(location).toString();
+
+            System.out.println(this.Success() + ": Temperature at this location is " + temperature);
+        } else {
+            System.out.println(locationUnknown(location));
+        }
+    }
+
+    // Loop through the "map" HashMap to return the Temperature of a given Location
+    private Temperature readTemperatureOK(Location location) {
+
+        for (Map.Entry<Sensor, Location> entry : map.entrySet()) {
+            if (entry.getValue().equals(location)) {
+                Sensor sensor = entry.getKey();
+                return read.get(sensor);
+            }
+        }
+        return null;
     }
 
 }
