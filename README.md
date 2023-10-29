@@ -17,4 +17,8 @@ Lecture Section H
 ## Language
 Java
 
-## Description
+## Iteration 1 Demo Video
+
+https://github.com/inas-fawzi/SOEN342Project/assets/95307617/5eeef5b0-eff0-44d9-a960-061711983d72
+
+
