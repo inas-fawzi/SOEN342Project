@@ -148,4 +148,22 @@ public class TempMonitor {
             return "";
         }
     }
+
+    public HashMap<Location, Temperature> readAll(){
+        HashMap<Location, Temperature> readMap = new HashMap<Location, Temperature>();
+        for (Sensor s : map.keySet()){
+            Location l = map.get(s);
+            Temperature t = null;
+
+            for (Sensor s2 : read.keySet()){
+                if (s2.equals(s)){
+                    t = read.get(s2);
+                }
+            }
+            
+            readMap.put(l, t);
+        }
+
+        return readMap;
+    }
 }
