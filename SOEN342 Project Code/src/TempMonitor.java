@@ -139,6 +139,7 @@ public class TempMonitor {
         }
         return null;
     }
+    
     //Will check if a location is not covered by a sensor and display a warning message
     private String locationUnknown (Location location){
         if(!map.containsValue(location)){
@@ -166,4 +167,27 @@ public class TempMonitor {
 
         return readMap;
     }
+
+    public void replaceSensor(Sensor oldsensor){
+        if (!deployed.contains(oldsensor)){
+            System.out.println("Sensor"+ oldsensor.toString() +"unknown");
+        }
+        else{
+            //get location and temp for the new sensor
+            Location address= map.get(oldsensor);
+            Temperature temp= read.get(oldsensor);
+
+            //remove old sensor
+            map.remove(oldsensor);
+            read.remove(oldsensor);
+            deployed.remove(oldsensor);
+            sensorList.remove(oldsensor);
+
+            //create a new sensor and deploy it
+            Sensor s = new Sensor();
+            sensorList.add(s);
+            deploySensor(s, address, temp);
+        }
+    }
 }
+
