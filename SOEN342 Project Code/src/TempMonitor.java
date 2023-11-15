@@ -168,6 +168,20 @@ public class TempMonitor {
         return readMap;
     }
 
+    public void printReadAll(){
+        HashMap<Location, Temperature> allLocTemp = this.readAll();
+
+        System.out.println("\nLocation & Temperature");
+        System.out.println("------------------------------------------");
+
+        for(Location l : allLocTemp.keySet()){
+            String loc = l.toString();
+            String temp = allLocTemp.get(l).toString();
+
+            System.out.println(String.format("%-25s || %s", loc, temp));
+        }        
+    }
+
     public void replaceSensor(Sensor oldsensor){
         if (!deployed.contains(oldsensor)){
             System.out.println("Sensor"+ oldsensor.toString() +"unknown");

@@ -28,10 +28,17 @@ public class TempMonitorApp {
         tempMonitor.readTemperature(L1); //location with a sensor
         tempMonitor.readTemperature(L2); //location with NO sensor
 
-        //testing replaceSensor()
+        // testing replaceSensor()
         System.out.println(sensors);
         tempMonitor.replaceSensor(sensors.get(2));
         System.out.println(sensors);
+
+        // testing readAll()
+        System.out.println("\nreadAll() test");
+        System.out.println(tempMonitor.readAll());
+
+        // testing printReadAll()
+        tempMonitor.printReadAll();
 
     }
 }
