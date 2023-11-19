@@ -21,4 +21,9 @@ Java
 
 https://github.com/inas-fawzi/SOEN342Project/assets/95307617/5eeef5b0-eff0-44d9-a960-061711983d72
 
+## Iteration 2 Demo Video
+
+https://github.com/inas-fawzi/SOEN342Project/assets/95307617/e4955121-69e7-4859-ba56-fe0a43ac9fb4
+
+
 
